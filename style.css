@@ -1,0 +1,63 @@
+.body {
+        background-color: #f2f2f2;
+    }
+
+    .main {
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0px 0px 1px;
+        width: 270px;
+        border-radius: 5px;
+        padding: 1px 10px;
+        margin: 10px auto;
+        background-color: white;
+    }
+
+    .head {
+        text-align: center;
+    }
+
+    .one {
+        width: 260px;
+        height: 20px;
+    }
+
+    .two {
+        width: 260px;
+        height: 20px;
+    }
+
+    .three {
+        width: 260px;
+        height: 20px;
+    }
+
+    .four {
+        width: 260px;
+        height: 20px;
+    }
+
+    .btn1 {
+        background-color: #2196f3;
+        border: none;
+        height: 20px;
+        width: 130px;
+        border-radius: 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn2 {
+        background-color: #f44336;
+        border: none;
+        height: 20px;
+        width: 130px;
+        border-radius: 2px;
+        margin-bottom: 10px;
+    }
+
+    .btn2:hover {
+        background-color: #d32f24;
+    }
+
+    .btn1:hover {
+        background-color: #1e8ae2;
+    }

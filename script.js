@@ -1,18 +1,27 @@
- function average(event) {
-            event.preventDefault();
+function average(event) {
+    event.preventDefault();
 
-            let num1 = parseFloat(document.getElementById("num1")).value;
-            let num2 = parseFloat(document.getElementById("num2")).value;
-            let num3 = parseFloat(document.getElementById("num3")).value;
-            let num4 = parseFloat(document.getElementById("num4")).value;
-            let sum;
-            let average 
+    // Get values from inputs
+    const n1 = parseFloat(document.getElementById("n1").value);
+    const n2 = parseFloat(document.getElementById("n2").value);
+    const n3 = parseFloat(document.getElementById("n3").value);
+    const n4 = parseFloat(document.getElementById("n4").value);
 
+    // Validate inputs
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3) || isNaN(n4)) {
+        alert("Please enter valid numbers in all fields.");
+        return;
+    }
 
+    // Calculate average
+    const sum = n1 + n2 + n3 + n4;
+    const avg = sum / 4;
 
-            sum = (num1 + num2 + num3 + num4) 
-            average =  sum / 4;
+    // Display result
+    // Use toFixed(2) for cleaner output (optional but good for UX)
+    document.getElementById("output").innerText = avg.toFixed(2);
+}
 
-
-            document.getElementById("output").innerHTML = `${average}`;
-        }
+function resetOutput() {
+    document.getElementById("output").innerText = "--";
+}

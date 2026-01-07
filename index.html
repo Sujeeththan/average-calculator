@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Average Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
-    <div class="main">
-        <div class="head">
-            <h3>Average Calculator</h3>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h3>Average Calculator</h3>
+                <p>Enter 4 numbers below</p>
+            </div>
+            <form id="calcForm" onsubmit="average(event)">
+                <div class="input-group">
+                    <label for="n1">Number 1</label>
+                    <input type="number" id="n1" placeholder="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="n2">Number 2</label>
+                    <input type="number" id="n2" placeholder="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="n3">Number 3</label>
+                    <input type="number" id="n3" placeholder="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="n4">Number 4</label>
+                    <input type="number" id="n4" placeholder="0" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Calculate Average</button>
+                    <button type="reset" class="btn btn-secondary" onclick="resetOutput()">Clear</button>
+                </div>
+            </form>
+            <div class="result-area">
+                <span>Result:</span>
+                <span id="output">--</span>
+            </div>
         </div>
-        <form action="">
-            <div>
-                <input type="number" name="number1" id="n1" placeholder="Enter number 1" class="one">
-                <!-- <p id="text1">Your entered:</p> -->
-                <br><br>
-                <input type="number" name="number2" id="n2" placeholder="Enter number 2" class="two">
-                <br><br>
-                <input type="number" name="number3" id="n3" placeholder="Enter number 3" class="three">
-                <br><br>
-                <input type="number" name="number4" id="n4" placeholder="Enter number 4" class="four">
-            </div>
-            <br>
-            <div>
-                <button type="submit" class="btn1" onclick="average(event)">Calculat Average</button>
-                <button type="reset" class="btn2">Clear</button>
-            </div>
-
-            <p id="output"></p>
-
-
-        </form>
     </div>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
